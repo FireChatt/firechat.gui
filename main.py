@@ -8,6 +8,10 @@ text_variable = StringVar()
 
 mainurl = "https://firechat-prototype.herokuapp.com"
 
+class Sendinput(Frame):
+    def __init__(self, master) -> None:
+        super().__init__(master, width=700, height=30, bg="grey")
+
 def get_all_messages():
     all_messages = get(f"{mainurl}/messages").json()
     
